@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🧠 Welcome to my TREASURE</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header section -->
+    <div class="header-section">
+      <h1>QUICK CHEAT SHEET 🧠 </h1><span>Made with <i class="fas fa-heart-broken"></i> by Ravindra B Asirvatham <span
+          class="xtra-small">1313</span> </span>
+      <li>
+        <a href="https://github.com/1313Ben" target="_blank">
+          <i class="fab fa-github-square"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+    </div>
+
+    <div class="grid-section">
+      <!-- CONTAINER LEFT -->
+      <div class="container-left">
+        <!-- Cardcontent left -->
+        <div class="card-content-left">
+
+          <!-- LeWagon lectures slides -->
+          <div class="card">
+            <h2>LeWagon lectures slides <img src="images/lewagon-logo.png" alt="" class="logo"></h2>
+            <a href="https://kitt.lewagon.com/camps/684/lectures" target="_blank"> 👉 All slides</a>
+          </div>
+
+          <!-- Terminal -->
+          <div class="card">
+            <h2>Terminal commands</h2>
+            <pre><span>//Restart your terminal if it happens</span><code>
+              cmd + q or ctrl + q
+            </code></pre>
+            <pre><span>// create a folder</span><code>
+  mkdir foldername </code></pre>
+            <pre><span>// current folder</span><code>
+    pwd</code></pre>
+            <pre><span>// create a file</span><code>
+touch filename</code></pre>
+            <pre><span>// go to home folder</span><code>
+cd</pre></code>
+            <pre><span>// go from current folder to any other folder</span><code>
+cd ../Eschults/lovely-hood <span># relative path from where you are</span>
+<span># or</span>
+cd ~/code/Eschults/lovely-hood <span># absolute path from your home directory</span>
+</code></pre>
+
+            <pre><span>// copy another folder to current folder</span><code>
+cp -r ../03-Finishing-profile-design/profile 
+</code> </pre>
+
+            <pre><span>// navigate to tab on the right </span><code>
+cmd + shift + →
+</code></pre>
+
+            <pre><span>// navigate to tab on the left </span><code>
+cmd + shift + ←
+</code></pre>
+
+            <pre><span>// rename a file </span><code>
+mv FILE_NAME NEW_FILENAME>
+</code></pre>
+
+            <pre><span>// open a new tab</span><code>
+  cm + t
+</code></pre>
+
+          </div>
+
+          <!-- Ruby -->
+          <div class="card">
+            <h2>Ruby <img src="images/ruby.png" alt="git-logo" class="logo"></h2>
+            <pre> <span>// Conventions</span>   
+# Methods, variables and filenames are in lower_snake_case
+# Class in UpperCamelCase
+# a method ending with a ? returns true or false
+# a method ending with a ! is destructive</pre>
+
+            <pre><code>IRB <span>// ruby console</span></code></pre>
+            <pre>
+<span>// often used methods</span>
+<code>"1984".to_i <span># to integer</span></code>
+<code>(1..5).to_a <span># to an array [1,2,3,4,5]</span></code>
+<code>(1...5).to_a <span># three dots matters [1,2,3,4]</span></code>
+<code>.to_s <span># conversion to string</span></code>
+<code>.to_hash <span># conversion to hash </span></code>
+<code>.delete <span></span></code>
+<code>.delete_at()</code>
+<code>"".empty? <span># check for empty</span></code>
+<code>.include? <span># ask for if contains any kind of elements</span></code>
+<code>"".size , .length <span># check the size of any variable</span></code>
+<code>.sort, .even?, .odd, .truncate <span># 3.1416.truncate => 3</span></code>
+<code>.round <span># 1.618.round => 2</span></code>
+<span>// extract</span>
+<code>string = "abc123", string[0,3] <span># "abc"</span></code>
+<code>string[3,3] <span># "123"</span></code>
+<code>string[0..-2] <span># "abc12" // -1 would be 3</span></code>
+<code>rand(1..10) <span># creates random numbers between 1 - 10</span></code>
+<code> << , .push <span># append elements</span> </code>
+<code>beatles.last <span>or</span> beatles[-1] <span># same</span></code>
+<code>.sum <span># sums</span></code>
+<code>numbers.each_slice(2).to_a <span># group Array items by pair > </span></code>
+<code>.value? <span># check for value present in a hash</span></code>
+<code>.key? <span>or</span> hash[:symbol_name]<span># check for if key present in a hash</span></code>
+<code>hash[:age] = 42 <span>sets 42 for key age in hash</span></code>
+<code>.keys , .values <span># print all keys and values of a hash</span></code>
+<code>.gsub(" ", " ") <span># replace stuff</span></code></code>
+<code>.shuffle <span># shuffle stuffs</span></code>
+<code>.all? <span># todo</span></code>
+          
+<span># clean an Array from items matching a condition</span>
+<code class="code-idention">musicians.reject do |musician|
+  musician.start_with? "J" 
+end</code><span># reject only the elements that start with a "J"</span></pre>
+
+            <pre> <span>// blocks ,iterators</span>
+<code class="code-idention">[1, 2, 3].each do |num|
+  puts num
+end
+<span># or</span>
+[1, 2, 3].each { |num| puts num }</code>
+<span>// </span>
+<span class="random-notes">The iterators that return the transformed array: 
+#select, #map, #find, #sort_by, #count, etc…</span>
+<code>.eg: [1, 2, 3, 4].select { |i| i.even? }</code>
+<span>//</span>
+<span class="random-notes">The iterators that return the original array, 
+but allow you to perform an action with each item: 
+#each, #each_with_index, #each_key</span>
+<span>// iterate a hash</span><code class="code-idention">
+hash.each do |key, value|
+  puts "The city #{key} is #{value}"
+end</code></pre>
+
+            <pre>
+<span>// getters / setters / both </span><code>
+  attr_reader :name
+  attr_writer :name
+  attr_accessor :name
+</code></pre>
+
+            <pre> <span>// random notes </span>
+<code>case when</code> # use when you have many cases in your conditional
+# until loop is the opposite of while loop
+# truthy: anything that is different from 
+false or nil (0 is truthy!)
+# puts "Hello #{variable}" </pre>
+            <pre>
+#The private keyword separates public 
+methods that can be called from outside the class, 
+and private methods that can only be called between
+within the class (between class and end)</pre>
+            <pre>
+# require_relative "classname"
+</pre>
+            <pre><span>// ternary operator</span><code>
+condition ? code_when_truthy : code_when_falsey
+</code></pre>
+            <pre><span>// inline condition. When there’s only one 
+              branch in the statement</span>
+<code>do_something if condition</code></pre>
+
+<pre><span>// operators</span><code>
+  || && ! **= += -= == <span># or and not exponent sums subtract equal </span>
+</code></pre>
+
+            <pre><span>//run a ruby local webserver at port 8000:</span><code>
+ruby -run -e httpd . -p 8000
+</code></pre>
+
+            <pre><span>opposite of a given condition</span>
+<code>puts "You can vote" if !condition</code>
+<code>puts "You can vote" unless condition <span># recommended style</span></code></pre>
+
+            <a href="https://ruby-doc.org/core-2.7.3/"> 👉 Ruby documentation</a>
+            <a href="https://github.com/ThibaultJanBeyer/cheatsheets/blob/master/Ruby-Cheatsheet.md"> 👉 Very nice
+              cheetsheet</a>
+            <a href="https://ruby-doc.org/core-2.5.3/Enumerable.html"> 👉 Enumerable </a>
+            <a href="https://ruby-doc.org/core-3.0.2/Array.html"> 👉 Array builtin methods</a>
+
+            <a href="https://kitt.lewagon.com/camps/684/lectures/search?keyword=operator&button=" target="_blank"> 👉
+              Control flowss & Arrays </a>
+
+            <a href="https://rubygems.org/" target="_blank"> 👉 Ruby Gems</a>
+
+          </div>
+
+
+          <!-- SQL -->
+          <div class="card">
+            <h2>SQL</h2>
+            <pre><span>// 1:N one to many</span></pre>
+
+            <pre>Split always N:N Relations. Create a Join-Table</pre>
+            <br>
+
+            <h3>// TODO .. coming soon</h3>
+
+          </div>
+
+          <!-- HTML CSSS -->
+          <div class="card">
+            <h2>HTML / CSS <i class="fab fa-html5"></i> <i class="fab fa-css3-alt"></i></h2>
+            <a href="https://frontendmasters.com/books/front-end-handbook/2019/" target="_blank"> 👉 Front-End Masters
+              Handbook</a>
+            <p>A wonderful and massive read on everything you need to know about being a brilliant Front-End Developer.
+              Front-End
+              Masters is by far my favourite resource of online tutorials</p>
+
+            <a href="https://frontendmasters.com/books/front-end-handbook/2019/" target="_blank"> 👉 Complete Flexbox
+              Guide/Cheetsheet/</a>
+
+            <p>One more life-saving resource from CSS-Tricks !! The most comprehensive guide to Flexbox out there!</p>
+
+            <a href="https://css-tricks.com/what-you-should-know-about-collapsing-margins/" target="_blank"> 👉 On
+              Margin
+              Collapse</a>
+
+            <p>Margins collapse! Save yourselves some frustration by reading
+              this!
+            </p>
+            <a href="https://css-tricks.com/absolute-positioning-inside-relative-positioning/" target="_blank"> 👉
+              Absolute
+              & relative
+              positioning</a>
+            <a href="https://css-tricks.com/almanac/properties/t/transition/" target="_blank"> 👉 How CSS Transitions
+              work!</a>
+
+            <a href="https://css-tricks.com/css3-gradients/" target="_blank"> 👉 How CSS Gradients work!</a>
+
+            <a href="https://css-tricks.com/a-complete-guide-to-css-media-queries/" target="_blank"> 👉 Recap on media
+              queries</a>
+
+
+            <a href="https://flexboxfroggy.com/ target=" _blank"> 👉 Flexbox Froggy</a>
+
+
+            <a href="https://codeguide.co/" target="_blank"> 👉 Codeguide</a>
+            <p>Standards for HTML and CSS (and a tiny bit of JS). A nice afternoon read.</p>
+
+            <a href="https://css-tricks.com/how-css-selectors-work/" target="_blank"> 👉 CSS Selectors</a>
+
+            <p>How to select different parts of your html</p>
+
+            <a href="https://css-tricks.com/pseudo-class-selectors/" target="_blank"> 👉 Pseudo-Selectors/Classes</a>
+
+            <a href="https://css-tricks.com/the-css-box-model/" target="_blank"> 👉 The Box Model</a>
+            <a href="https://www.youtube.com/watch?v=rIO5326FgPE" target="_blank"> 👉 CSS Box Model In 8 Minutes</a>
+
+            <a href="https://css-tricks.com/the-lengths-of-css/" target="_blank"> 👉 The Lengths of CSS</a>
+            <p>Did you know 'px' has nothing to do with actual
+              screen pixels? or that 'in' is not really inches but 96px, which are
+              also not pixe...whaaaaat?</p>
+
+            <a href="htmlreference.io" target="_blank"> 👉 html reference</a>
+
+            <a href="cssreference.io" target="_blank"> 👉 css reference</a>
+
+            <a href="https://baymard.com/blog/drop-down-usability" target="_blank"> 👉 Drop-Down Usability: When You
+              Should (and Shouldn’t) Use Them</a>
+            <a href="https://uxmovement.com/forms/best-practices-for-modal-windows/" target="_blank"> 👉 Best Practices
+              for Modal Windows</a>
+
+            <pre><span>// shortcut for creating class</span><code>
+                div.card-container <span># class="card-container"</span>
+              </code></pre>
+
+            <pre><span class="random-notes">By default font size is 16px .. depends on browser settings</span></pre>
+
+            <pre><span>// browser hard refresh</span><code>
+              cmd + shift + r
+            </code></pre>
+          </div>
+
+          <!-- HTTP / AJAX -->
+          <div class="card">
+            <h2>HTTP / AJAX</h2>
+            <pre><span>//what is a HTTP(HyperText Transfer Protocol) -Request</span><code>
+It contains three to four parts:  
+1. a verb or method (GET, POST, PATCH or DELETE)
+2. a url (e.g: https://www.google.com/search?q=lewagon)
+3. headers (metadata built by the client > User-Agent, Referer, Cookies, etc.)
+4. a body (data coming from a form) for POST, PATCH and PUT requests
+</code></pre>
+            <pre><span>// command-line tool to use</span></pre>
+
+
+            <pre><span>// General form for GET Request</span><code class="code-idention">
+fetch(url).then((response) => {
+  // Do something once HTTP response is received
+});</code></pre>
+
+            <pre><span>// if you want to do something with response data</span><code class="code-idention">
+fetch(url)
+  .then(response => response.json())
+  .then((data) => {
+  console.log(data); // `data` is now a JS object
+});
+</code></pre>
+
+            <pre><span>// example for a POST</span><code class="code-idention">
+<span>The HTTP method (aka verb)</span>
+<span>The HTTP headers (telling the server we’re sending some JSON)</span>
+<span>The HTTP body, with the actual JSON being posted</span>
+fetch(url, {
+  method: "POST",
+  headers: {"Content-Type": "application/json" },
+  body: JSON.stringify(a_js_object)
+})
+</code></pre>
+            <pre><span>// event handling</span>
+The rule of thumb is to always use "event.currentTarget"</pre>
+            <a href="https://curl.haxx.se/docs/manual.html" target="_blank"> 👉 curl</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ENDS CARDS LEFT -->
+
+
+      <!-- CONTAINER RIGHT -->
+      <div class="container-right">
+        <!-- Cardcontet right -->
+        <div class="card-content-right">
+
+          <!-- Git -->
+          <div class="card">
+            <h2>Git <img src="images/git.png" alt="git-logo" class="logo"></h2>
+            <pre><span>// check git difference</span><code>
+git diff
+git diff a_specific_file_or_folder
+</code></pre>
+<pre><span class="random-notes"> How to create a github page? -- It is based on a “magic” branch, called gh-pages.
+              When Github detects this branch, it puts your website online</span>
+        <span>// 1. initialize the current folder to git repo</span><code>
+git init</code>
+<span>//2. this creates the associated repo on Github!</span><code>
+gh repo create</code>
+<span>//3. open the github repo</span><code></code>
+gh repo view --web</code>
+<span>//4. creates a branch name gh-pages</span><code>
+git co -b gh-pages </code>
+<span>//we push the gh-pages branch, not to master!</span><code>
+git push origin gh-pages </code>
+<span>// where to find the page</span><code>
+http://1313Ben.github.io/folder_which_contains_index.html/</code></pre>
+
+            <pre><span>// checks if there is a remote on git cloud</span><code>
+              git remote -v 
+            </code></pre>
+          </div>
+
+          <!-- VS code -->
+          <div class="card">
+            <h2>VS-Code <img src="images/vscode.jpeg" alt="git-logo" class="logo"></h2>
+            <pre><span>// format code</span><code>
+alt + options + f </code></pre>
+
+            <pre><span>// comment anything</span><code>
+cmd + /</code></pre>
+
+            <pre><span>// move a line up or down</span><code>
+alt + up <span># or</span> + down</code></pre>
+
+            <pre><span>// select multiple tags</span><code>
+cmd + d</code></pre>
+
+            <pre><span>// search stuff </span><code>
+  cmd + shift + p
+</code></pre>
+          </div>
+
+          <!-- JS -->
+          <div class="card">
+            <h2>JS <img src="images/js.png" alt="js-logo" class="logo"></h2>
+
+            <pre><span>// executing JS code on terminal</span><code>
+              node
+            </code></pre>
+
+            <pre><span>// executing a JS file on terminal</span><code>
+              node path/filename.js
+            </code></pre>
+
+            <pre><span>// run webser</span><code>
+              yarn webpack</code></pre>
+
+            <pre><span>// import and export must be defined in those relevant files</span> <code>
+                import { fetchMovies, list } from './movies' ;
+                
+                const list = anyqueriess...
+                export { fetchMovies, list, } ;
+              </code></pre>
+
+            <pre><span>// iterate through an Object in JS</span><code class="code-idention">
+Object.keys(hash).forEach((key) => {
+console.log(key + " played the " + hash[key]);
+});
+<span>//or</span>
+<span>//iterating keys, values of an object</span>
+Object.entries(object).forEach(([key, value]) => 
+console.log(`${key}: ${value}`));</code></pre>
+
+            <a href="https://caniuse.com/?search=ES6" tabindex="_blank"> 👉 Check ES6 support</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects"
+              target="_blank"> 👉 Guide:
+              Working with Objects on MDN</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" target="_blank"> 👉 Guide:
+              Functions on MDN</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions"> 👉
+              WHAT SHOULD I USE? Arrow function expressions</a>
+            <a href="https://codetogo.io/"> 👉 Find up to date snippets for JavaScript & React use cases</a>
+            <a href="https://learnjavascript.online/?utm_source=codetogo.io"> 👉 The easiest way to learn & practice
+              modern JavaScript</a>
+            <a href="https://react-tutorial.app/?utm_source=codetogo.io"> 👉 The easiest way to learn React.</a>
+          </div>
+
+          <!-- DOM & EVENTS -->
+          <div class="card">
+            <h2>DOM & Events<img alt="js-logo" src="images/js.png" class="logo"></h2>
+            <pre><span>// manipulate CSS classes on a element:</span><code>
+element.classList.add("red");
+element.classList.remove("red");
+element.classList.toggle("red");</code></pre>
+
+            <pre><span>Define a JS Arrow function square taking one parameter x</span><code>
+const square = (x) => {
+return x * x;
+};</code>
+<span>//or</span><code>
+const square = x => x * x;</code></pre>
+            <pre><span>Name the following events occuring on inputs:</span><code>
+1) A user enters the field => 'focus'
+2) A user changes the value => 'change'
+3) A user leaves the field => 'blur' (or 'focusout')
+</code></pre>
+
+            <pre><span>//Queryselector use a CSS selector</span><code class="code-idention">
+document.querySelector(".red"); <span>//One element</span>
+document.querySelectorAll(".red"); <span>//Multiple elements</span>
+</code></pre>
+
+            <pre><span>//Get element by id, dont use #</span><code>
+document.getElementById("players")
+</code></pre>
+
+            <pre><span>//interact with DOM event</span><code>
+element.addEventListener('eventType', (event) => {
+// Do something with the event(callback)
+});
+</code></pre>
+
+            <pre><span>//How do you toggle an .img-circle class on all img on click?</span>
+1. Select all images with querySelectorAll
+2. Then bind a listener to the click event
+3. The callback for this listener uses event.
+currentTarget and updates its classes. <code class="code-idention">
+document.querySelectorAll("img").forEach((img) => {
+  img.addEventListener("click", (event) => {
+  event.currentTarget.classList.toggle("img-circle");
+  });
+});</code></pre>
+
+            <pre><span>//insertAdjacentHTML()</span>
+'beforebegin': Before the element itself.
+'afterbegin': Just inside the element, before its first child.
+'beforeend': Just inside the element, after its last child.
+'afterend': After the element itself.
+
+-- beforebegin --
+< p >
+-- afterbegin --
+foo
+-- beforeend --
+< /p >
+-- afterend --
+</pre>
+
+            <!-- UX / UI -->
+            <div class="card">
+              <h2>UI / UX</h2>
+              <a href="https://uikit.lewagon.com/documentation" target="_blank"> 👉 UI-KIT Lewagon</a>
+
+              <a href="https://formvalidation.io/" target="_blank"> 👉 Best form validation library for JavaScript. zero
+                dependencies.</a>
+
+              <a href="https://support.siteimprove.com/hc/en-gb/articles/115002726312-Accessibility-Bold-vs-Strong-and-Italic-vs-Emphasis"
+                target="_blank"> 👉 Accessibility:
+                Bold vs. Strong and Italic vs. Emphasis</a>
+              <a href="https://spec.fm/specifics/8-pt-grid"> 👉 Why use multiples of 8 as values?</a>
+            </div>
+
+            <!-- Colors  -->
+            <div class="card">
+              <h2>Colors</h2>
+              <a href="https://colorhunt.co/" target="_blank"> 👉 Color Hunt</a>
+              <a href="https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=en"
+                target="_blank">
+                👉 ColorZilla</a>
+              <p>Plug-in to pick colours from anywhere on a webpage</p>
+              <br>
+              <h3>// TODO .. coming soon </h3>
+            </div>
+
+            <div class="card">
+              <h2>Rails</h2>
+              <pre><span class="random-notes">
+                CODE IN SILO
+                1. Route
+                2. Controller action
+                3. View
+                Test in browser
+              </span></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTAINER RIGHT END -->
+    </div>
+
+  </div>
+
+</body>
+
+</html>

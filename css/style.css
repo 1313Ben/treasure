@@ -1,0 +1,158 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:700');
+/* Fontawesome */
+
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+/* Importing all components file */
+
+@import url("components/banner.css");
+/* @import url("components/cards.css"); */
+
+@import url("components/footer.css");
+/* Utilities */
+
+body {
+  font-family: Open Sans;
+  background-image: repeating-linear-gradient(-45deg, white 0px, white 0px, skyblue 2px, skyblue 2px);
+}
+
+h1, h2, h3, h4 {
+  font-family: Poppins;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h2, h3{
+  padding-left: 15px;
+  padding-right: 4px;
+  font-weight: lighter;
+}
+
+h4 {
+  font-size: small;
+}
+
+pre {
+  background-color: rgb(248, 243, 236);
+  white-space: pre-line;
+  border-radius: 1px;
+  padding-left: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.code-idention {
+  white-space: pre;
+}
+
+p {
+  padding-left: 15px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: small;
+  color: grey;
+}
+
+.xtra-small {
+  font-size: x-small;
+}
+
+.extra {
+  background-color: rgb(248, 243, 236);
+  font-size: small;
+  color: black;
+}
+
+span {
+  font-size: medium;
+  padding-bottom: 2px;
+  color: grey;
+}
+
+.random-notes {
+  color:black;
+}
+
+code {
+  color:darkorchid;
+  background-color: gainsboro;
+}
+
+a {
+  display: block;
+  padding-left: 15px;
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+  padding-top: 10px;
+}
+
+a:hover {
+  color: grey;
+}
+
+/* Custom design below! */
+
+.container {
+  background-color: white;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.header-section {
+  border-bottom: 1px solid skyblue;
+  padding-left: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.grid-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4px;
+  margin-top: 20px;
+  margin-left: 9px;
+  margin-right: 9px;
+}
+
+@media(max-width: 768px) {
+  .grid-section {
+    grid-template-columns: 1fr;
+  }
+  body {
+    background-image: none;
+  }
+  .container {
+    margin-left: 0px;
+    margin-right: 0px;
+    ;
+  }
+}
+
+.card {
+  border-color: skyblue;
+  box-shadow: 0 0 1px rgb(0 0 0 / 20%);
+  padding: 15px 5px 15px 5px;
+}
+
+.card .logo {
+  height: 25px;
+  padding-left: 10px;
+}
+
+.fa-heart-broken {
+  color: red;
+}
+
+li {
+  display: inline-block;
+}
