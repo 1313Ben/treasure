@@ -79,6 +79,9 @@ cmd + shift + ←
             <pre><span>// rename a file </span><code>
 mv FILE_NAME NEW_FILENAME>
 </code></pre>
+            <pre><span>// remove directory</span><code>
+rm dir
+</code></pre>
 
             <pre><span>// open a new tab</span><code>
   cm + t
@@ -179,7 +182,7 @@ condition ? code_when_truthy : code_when_falsey
               branch in the statement</span>
 <code>do_something if condition</code></pre>
 
-<pre><span>// operators</span><code>
+            <pre><span>// operators</span><code>
   || && ! **= += -= == <span># or and not exponent sums subtract equal </span>
 </code></pre>
 
@@ -349,7 +352,7 @@ The rule of thumb is to always use "event.currentTarget"</pre>
 git diff
 git diff a_specific_file_or_folder
 </code></pre>
-<pre><span class="random-notes"> How to create a github page? -- It is based on a “magic” branch, called gh-pages.
+            <pre><span class="random-notes"> How to create a github page? -- It is based on a “magic” branch, called gh-pages.
               When Github detects this branch, it puts your website online</span>
         <span>// 1. initialize the current folder to git repo</span><code>
 git init</code>
@@ -522,14 +525,90 @@ foo
             </div>
 
             <div class="card">
+              <h2>Parsing & Scarping</h2>
+              <pre><span>// parsing json in ruby</span><code>
+require 'json'
+require 'open-uri'
+
+url = 'any_api_url'
+response = URI.open(url).read
+response = JSON.parse(respone)
+              </code></pre>
+
+              <pre><span>// scraping in ruby</span><code>
+require 'open-uri'
+require 'nokogiri'
+
+ingredient = 'chocolate'
+url = "https://www.bbcgoodfood.com/search/recipes?q=#{ingredient}"
+
+html_file = URI.open(url).read
+html_doc = Nokogiri::HTML(html_file)
+
+html_doc.search('.standard-card-new__article-title').each do |element|
+puts element.text.strip
+puts element.attribute('href').value
+end
+              </code></pre>
+            </div>
+
+            <div class="card">
               <h2>Rails</h2>
+              <pre><span>// create a rails app</span><code>
+                rails new my-appname
+              </code></pre>
+              <pre><span>// skip generating tests when creating a new Rails app</span><code>
+  rails new MY_APP -T
+</code></pre>
               <pre><span class="random-notes">
                 CODE IN SILO
                 1. Route
-                2. Controller action
+                2. Controller action  <span># rails generate controller foo</span>
                 3. View
                 Test in browser
               </span></pre>
+              <pre><span class="random-notes">An action is a controller’s method targeted by a route.</span></pre>
+              <pre><span>// link to home</span><code>
+<%= link_to "Home" , root_path %>
+              </code></pre>
+              <pre><span class="random-notes">
+How do you install gems you added to your Gemfile?:
+1. Kill any web server running (Ctrl + C)
+2. Run bundle install
+3. Restart the Rails server with rails s
+              </span></pre>
+              <pre><span>// check page prefix</span><code>
+                rails routes
+                <span class="random-notes"> 
+                  rails routes show you a list of your routes with details:
+                  1. Prefix is the rails path prefix of the associated route
+                  2. Verb is the HTTP verb of the route
+                  3. URI Pattern is the path of the route
+                  4. Controller#Action are targeted controller and method
+                </span>
+              </code></pre>
+              <pre><span>// launch local Rails server</span><code>
+                rails server # or rails s
+              </code></pre>
+              <pre><span class="random-notes">
+# define a static page ‘home’ as homepage
+# config/routes.rb
+Rails.application.routes.draw do
+  root to: 'coontrollersname#home'
+end
+</span></pre>
+
+              <pre><span>// view naming convention</span><code>
+actionname.html.erb
+</code></pre>
+              <pre><span>// route syntax</span><code>
+                  get 'contact' => 'pages#contact'
+                  # OR
+                  get 'contact', to: 'pages#contact'
+              </code></pre>
+
+              <pre><span>// params holds the formdata</span></pre>
+
             </div>
           </div>
         </div>

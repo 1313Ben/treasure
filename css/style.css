@@ -1,17 +1,8 @@
-/* Fonts */
-
+/* Font */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:700');
+
 /* Fontawesome */
-
 @import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
-/* Importing all components file */
-
-@import url("components/banner.css");
-/* @import url("components/cards.css"); */
-
-@import url("components/footer.css");
-/* Utilities */
-
 body {
   font-family: Open Sans;
   background-image: repeating-linear-gradient(-45deg, white 0px, white 0px, skyblue 2px, skyblue 2px);
@@ -27,7 +18,7 @@ h3 {
   font-size: 16px;
 }
 
-h2, h3{
+h2, h3 {
   padding-left: 15px;
   padding-right: 4px;
   font-weight: lighter;
@@ -79,11 +70,11 @@ span {
 }
 
 .random-notes {
-  color:black;
+  color: black;
 }
 
 code {
-  color:darkorchid;
+  color: darkorchid;
   background-color: gainsboro;
 }
 
