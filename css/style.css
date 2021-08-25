@@ -145,8 +145,12 @@ a:hover {
   padding-left: 10px;
 }
 
-.fa-heart-broken {
+.fa-heart {
   color: red;
+}
+
+.fa-gem {
+  color: skyblue;
 }
 
 li {

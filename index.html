@@ -13,7 +13,7 @@
   <div class="container">
     <!-- Header section -->
     <div class="header-section">
-      <h1>QUICK CHEAT SHEET WEB DEV 🧠 </h1><span>Made with <i class="fas fa-heart-broken"></i> by Ravindra B Asirvatham <span
+      <h1>MY WEB-DEV TREASURE <i class="fas fa-gem"></i> </h1><span>Made with <i class="fas fa-heart"></i> by Ravindra B Asirvatham <span
           class="xtra-small">1313</span> </span>
       <li>
         <a href="https://github.com/1313Ben" target="_blank">
@@ -81,6 +81,11 @@ mv FILE_NAME NEW_FILENAME>
 </code></pre>
             <pre><span>// remove directory</span><code>
 rm dir
+</code></pre>
+
+
+<pre><span>// remove file</span><code>
+rm filename.extension
 </code></pre>
 
             <pre><span>// open a new tab</span><code>
@@ -196,7 +201,7 @@ ruby -run -e httpd . -p 8000
 
             <a href="https://ruby-doc.org/core-2.7.3/"> 👉 Ruby documentation</a>
             <a href="https://github.com/ThibaultJanBeyer/cheatsheets/blob/master/Ruby-Cheatsheet.md"> 👉 Very nice
-              cheetsheet</a>
+              cheatsheet</a>
             <a href="https://ruby-doc.org/core-2.5.3/Enumerable.html"> 👉 Enumerable </a>
             <a href="https://ruby-doc.org/core-3.0.2/Array.html"> 👉 Array builtin methods</a>
 
@@ -388,9 +393,13 @@ alt + up <span># or</span> + down</code></pre>
             <pre><span>// select multiple tags</span><code>
 cmd + d</code></pre>
 
-            <pre><span>// search stuff </span><code>
+            <pre><span>// search anything in your project </span><code>
+              cmd + p
+            </code></pre>
+            <pre><span>// search settings in vs-code </span><code>
   cmd + shift + p
 </code></pre>
+
           </div>
 
           <!-- JS -->
@@ -568,50 +577,52 @@ end
             <div class="card">
               <h2>Rails</h2>
               <pre><span>// create a rails app</span><code>
-                rails new my-appname
+                rails new myappname
               </code></pre>
-              <pre><span>// skip generating tests when creating a new Rails app</span><code>
-  rails new MY_APP -T
+              <pre><span>// if you want to skip generating exrtra stuffs when creating a new Rails app</span><code>
+  rails new myappname --skip-active-storage --skip-action-mailbox -T
 </code></pre>
-              <pre><span class="random-notes">
-                CODE IN SILO
+              <pre><span class="random-notes">CODE IN SILO
                 1. Route
                 2. Controller action  <span># rails generate controller foo</span>
                 3. View
-                Test in browser
-              </span></pre>
+                Test in browser</span></pre>
               <pre><span class="random-notes">An action is a controller’s method targeted by a route.</span></pre>
-              <pre><span>// link to home</span><code>
-<%= link_to "Home" , root_path %>
-              </code></pre>
-              <pre><span class="random-notes">
-How do you install gems you added to your Gemfile?:
+              <pre><span>// link syntax</span><code>
+<%= link_to "Home" , root_path </code></pre>
+              <pre><span class="random-notes">Steps whenn you added new gem(s) to your Gemfile?:
 1. Kill any web server running (Ctrl + C)
 2. Run bundle install
 3. Restart the Rails server with rails s
               </span></pre>
-              <pre><span>// check page prefix</span><code>
-                rails routes
+              <pre><span>// check all the routes</span><code>
+                rails routes</code>
                 <span class="random-notes"> 
                   rails routes show you a list of your routes with details:
                   1. Prefix is the rails path prefix of the associated route
                   2. Verb is the HTTP verb of the route
                   3. URI Pattern is the path of the route
                   4. Controller#Action are targeted controller and method
-                </span>
-              </code></pre>
+                </span></pre>
               <pre><span>// launch local Rails server</span><code>
                 rails server # or rails s
               </code></pre>
-              <pre><span class="random-notes">
-# define a static page ‘home’ as homepage
-# config/routes.rb
-Rails.application.routes.draw do
-  root to: 'coontrollersname#home'
-end
-</span></pre>
 
-              <pre><span>// view naming convention</span><code>
+<pre><span>// generating a model names Restaurant with two properties</span><code>
+  rails g model Restaurant name:string stars:integer
+rails db:migrate </code></pre>
+
+<pre><span>// generate a migration eg. add another property to Restaurant model</span><code>
+rails g migration AddAddressToRestaurants address:string
+rails db:migrate <span>#execute pending migrations</span></code></pre>
+
+<pre><span>// revert a generated model</span><code>
+rails destroy model Something
+<span># OR</span> 
+rails d model Something
+</code></pre>
+
+<pre><span>// view naming convention</span><code>
 actionname.html.erb
 </code></pre>
               <pre><span>// route syntax</span><code>
@@ -620,8 +631,83 @@ actionname.html.erb
                   get 'contact', to: 'pages#contact'
               </code></pre>
 
-              <pre><span>// params holds the formdata</span></pre>
+              <pre><span class="random-notes">params holds the formdata</span></pre>
 
+              <pre><span>// 7 CRUD actions</span> <code>
+                index <span># Read all resources</span>  
+                show <span># Read one resource</span> 
+                new <span># display form for a resource creation</span>  
+                create <span># Create resource</span>  
+                edit <span># display form for a resource update</span> 
+                update <span># Update resource</span>
+                destroy <span># Delete resource</span> 
+              </code></pre>
+
+              <pre><span>// rails db tasks</span><code>
+                rails db:drop <span># Drops the database (lose all your data!)</span>
+                rails db:create <span># Creates the database with an empty schema</span> 
+                rails db:migrate <span># Runs pending migrations on the database schema</span>
+                rails db:seed <span># Runs seeds.rb file</span>
+                rails db:rollback <span>Revert the last migration</span>
+                rails db:reset <span># Drops database + replays all migration + runs seed </span>
+              </code></pre>
+
+              <pre><span>// shortcut to generate 7CRUD routes</span><code>
+                resources :controllernameinplural <span># in config/routes.rb</span>
+              </code></pre>
+
+              <pre><span>// how to generate a subset of th 7 CRUD routes</span><code>
+              resources :controllernameinplural, only: [:index, :show] <span># in config/routes.rb</span>
+              </code></pre>
+
+              <pre><span>// def index - Read all resources</span><code>
+                  @restaurants = Restaurant.all <span># @restaurants will be passed to the view then iterate</span>
+              </code></pre>
+
+
+              <pre><span>// def new - display form for a resource creation</span><code>
+                  @restaurant = Restaurant.new <span># @restaurant's properties can be entered in a form( use method: POST) then submits creates a new restaurant</span>
+              </code></pre>
+
+              <pre><span>// def show - Read one resource</span><code>
+                  @restaurant = Restaurant.find(params[:id]) <span># @restaurant property will be passed to the the view</span>
+              </code></pre>
+
+              <pre><span>// def edit - display form for a resource update</span><code>
+                                @restaurant = Restaurant.find(params[:id]) <span># @restaurant's properties can be entered in a form( use method: PATCH) then submit creates a new restaurant
+                                a new restaurant</span>
+              </code></pre>
+
+              <pre><span>// def destroy</span><code>
+            @restaurant = Restaurant.find(params[:id])<span># </span>
+            model.destroy
+            redirect_to models_path <span># redirect to index</span>
+              </code></pre>
+
+              <pre><span>// naming convention for creating a html template</span><code>
+                app/views/restaurants/_template.html.erb
+                <span>// usage in a view</span>
+                <%= render 'template' , model: @model %>
+              </code>
+              </pre>
+            
+              <pre><span>//Rails Console in Sandbox mode</span><code>
+                rails c --sandbox <span># test your models without affecting your (development) DB. On exit, every change (create/update/delete) is rollbacked
+                thanks to a database transaction.</span>
+              </code></pre>
+
+              <pre><span>// crash test your model</span>
+                In <code>rails console</code> . Just type <code>rails console</code> or <code>rails c</code> in your terminal, this will open irb, load your models and
+                establish a connection to your local (development) DB.
+              </pre>
+
+              <pre><span>// load last code-changes in your model(s) without exiting and re-entering in your console</span><code>
+                reload!
+              </code></pre>
+
+              <a href="https://github.com/lewagon/rails-stylesheets/blob/master/README.md"> 👉 Rails Frontend guide</a>
+
+            
             </div>
           </div>
         </div>
