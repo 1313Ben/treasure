@@ -641,7 +641,7 @@ link_to "Home" , root_path </code></pre>
               </code></pre>
 
 <pre><span>// generating a model eg. Restaurant</span><code>
-  rails g model restaurant name:string stars:integer <span># we adding two properties</span>
+  rails g model Restaurant name:string stars:integer <span># model name in singular</span>
 rails db:migrate <span># always migrate after !!!</span> </code></pre>
 
 <pre><span>// generating a model eg. Review and add Restaurant as foreign key</span><code>
@@ -714,10 +714,17 @@ render 'template' , model: @model
               </pre>
 
               <pre><span>// load last code-changes in your model(s) without exiting and re-entering in your console</span><code>
-                reload!
-              </code></pre>
+                reload!</code></pre>
+
+              <pre><span>// shows all notes in your project</span><code>
+                rails notes </code></pre>
 
               <a href="https://github.com/lewagon/rails-stylesheets/blob/master/README.md"> 👉🏼 Rails Frontend guide</a>
+
+              <pre>never nest more than one level in scss</pre> 
+              <pre>https://stackoverflow.com/questions/17918117/rails-4-list-of-available-datatypes</pre>
+              <a href="https://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-add_column"> List of available Rails datatypes</a>
+              
 
             
             </div>
