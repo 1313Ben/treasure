@@ -44,7 +44,7 @@
             <a href="https://kitt.lewagon.com/camps/684/lectures" target="_blank"> 👉🏼 All slides</a>
           </div>
 
-          <!-- Terminal -->
+          <!-- TERMINAL -->
           <div class="card">
             <h2>Terminal commands</h2>
             <pre><span>//Restart your terminal if it happens</span><code>
@@ -84,7 +84,7 @@ rm dir
 </code></pre>
 
 
-<pre><span>// remove file</span><code>
+            <pre><span>// remove file</span><code>
 rm filename.extension
 </code></pre>
 
@@ -94,7 +94,7 @@ rm filename.extension
 
           </div>
 
-          <!-- Ruby -->
+          <!-- RUBY -->
           <div class="card">
             <h2>Ruby <img src="images/ruby.png" alt="git-logo" class="logo"></h2>
             <pre> <span>// Conventions</span>   
@@ -230,10 +230,13 @@ ruby -run -e httpd . -p 8000
             <h2>ACTIVE RECORD</h2>
             <a href="https://guides.rubyonrails.org/active_record_basics.html" target="_blank"> 👉🏼 Basics</a>
             <a href="https://guides.rubyonrails.org/active_record_migrations.html" target="_blank"> 👉🏼 Migrations</a>
-            <a href="https://guides.rubyonrails.org/active_record_validations.html" target="_blank"> 👉🏼 Validations</a>
+            <a href="https://guides.rubyonrails.org/active_record_validations.html" target="_blank"> 👉🏼
+              Validations</a>
             <a href="https://guides.rubyonrails.org/active_record_callbacks.html" target="_blank"> 👉🏼 Callbacks </a>
-            <a href="https://guides.rubyonrails.org/association_basics.html" target=""_blank> 👉🏼 Association basics </a>
-            <a href="https://guides.rubyonrails.org/active_record_querying.html" target="_blank"> 👉🏼 Record querying </a>
+            <a href="https://guides.rubyonrails.org/association_basics.html" target="" _blank> 👉🏼 Association basics
+            </a>
+            <a href="https://guides.rubyonrails.org/active_record_querying.html" target="_blank"> 👉🏼 Record querying
+            </a>
           </div>
 
           <!-- HTML CSSS -->
@@ -347,7 +350,6 @@ The rule of thumb is to always use "event.currentTarget"</pre>
           </div>
         </div>
       </div>
-
       <!-- ENDS CARDS LEFT -->
 
 
@@ -356,13 +358,78 @@ The rule of thumb is to always use "event.currentTarget"</pre>
         <!-- Cardcontet right -->
         <div class="card-content-right">
 
-          <!-- Git -->
+          <!-- GIT -->
           <div class="card">
             <h2>Git <img src="images/git.png" alt="git-logo" class="logo"></h2>
+            <pre><span>// git status</span><code>
+              git status <span>or</span> gst
+            </code></pre>
             <pre><span>// check git difference</span><code>
 git diff
 git diff a_specific_file_or_folder
 </code></pre>
+
+            <pre><span>//shows all commits</span> <code>
+git lg
+</code></pre>
+
+            <pre><span>// create a branch </span><code>
+  git checkout -b my_branch_name <span>or</span> gco -b my_branch_name
+</code></pre>
+
+<pre><span>// renaming branch</span><code>
+  git branch -m oldname newname <span># Any Branch</span> 
+  git branch -m newname <span># Current Branch</span> 
+</code></pre>
+
+<pre><span>// pushing a branch to git-cloud</span><code>
+  git push origin branchname 
+  gp origin branchname <span># shortcut</span>
+</code></pre>
+
+            <pre><span>// delete a local branch</span><code>
+git branch -d local_branch_name
+</code></pre>
+
+            <pre><span>// delete a remote branch</span><code>
+git push origin --delete my_branch_name
+</code></pre>
+
+            <pre><span>// switche to last worked on branch</span><code>
+  git checkout - <span>or</span> gco -
+</code></pre>
+
+            <pre><span>// pull all remote branches</span><code>
+git fetch -all
+</code></pre>
+
+            <pre><span>// show all local branches</span><code>
+  git branch
+</code></pre>
+
+            <pre><span>// show all remote branches</span><code>
+  git branch -r
+</code></pre>
+
+            <pre><span>// show all remote and local branches</span><code>
+  git branch -a
+</code></pre>
+
+<pre><span>// roll back to last commit </span><code>
+  git stash
+</code></pre>
+
+<pre><span>// revert the last commit </span><code>
+git clean -fd
+git reset --hard
+</code></pre>
+
+<pre><span>// revert the last push origin </span><code>
+  git reset HEAD^ --hard
+  git push -f
+</code></pre>
+
+
             <pre><span class="random-notes"> How to create a github page? -- It is based on a “magic” branch, called gh-pages.
               When Github detects this branch, it puts your website online</span>
         <span>// 1. initialize the current folder to git repo</span><code>
@@ -442,14 +509,15 @@ console.log(`${key}: ${value}`));</code></pre>
             <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects"
               target="_blank"> 👉🏼 Guide:
               Working with Objects on MDN</a>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" target="_blank"> 👉🏼 Guide:
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" target="_blank"> 👉🏼
+              Guide:
               Functions on MDN</a>
             <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions"> 👉🏼
               WHAT SHOULD I USE? Arrow function expressions</a>
             <a href="https://codetogo.io/"> 👉🏼 Find up to date snippets for JavaScript & React use cases</a>
             <a href="https://learnjavascript.online/?utm_source=codetogo.io"> 👉🏼 The easiest way to learn & practice
               modern JavaScript</a>
-            <a href="https://react-tutorial.app/?utm_source=codetogo.io"> 👉🏼 The easiest way to learn React.</a>
+            <a href="https://react-tutorial.app/?utm_source=codetogo.io"> 👉🏼 The easiest way to learn React</a>
           </div>
 
           <!-- DOM & EVENTS -->
@@ -518,7 +586,8 @@ foo
               <h2>UI / UX</h2>
               <a href="https://uikit.lewagon.com/documentation" target="_blank"> 👉🏼 UI-KIT Lewagon</a>
 
-              <a href="https://formvalidation.io/" target="_blank"> 👉🏼 Best form validation library for JavaScript. zero
+              <a href="https://formvalidation.io/" target="_blank"> 👉🏼 Best form validation library for JavaScript.
+                zero
                 dependencies.</a>
 
               <a href="https://support.siteimprove.com/hc/en-gb/articles/115002726312-Accessibility-Bold-vs-Strong-and-Italic-vs-Emphasis"
@@ -527,10 +596,11 @@ foo
               <a href="https://spec.fm/specifics/8-pt-grid"> 👉🏼 Why use multiples of 8 as values?</a>
               <a href="https://baymard.com/blog/drop-down-usability" target="_blank"> 👉🏼 Drop-Down Usability: When You
                 Should (and Shouldn’t) Use Them</a>
-              <a href="https://uxmovement.com/forms/best-practices-for-modal-windows/" target="_blank"> 👉🏼 Best Practices
+              <a href="https://uxmovement.com/forms/best-practices-for-modal-windows/" target="_blank"> 👉🏼 Best
+                Practices
                 for Modal Windows</a>
               <h3>// TODO .. coming soon</h3>
-           
+
             </div>
 
             <!-- REGEX -->
@@ -549,7 +619,9 @@ foo
               <p>Plug-in to pick colours from anywhere on a webpage</p>
               <br>
               <h3>// TODO .. coming soon </h3>
-            </div>
+            </div>¨
+
+            <!-- PARSING / SCRAPING -->
 
             <div class="card">
               <h2>Parsing & Scraping</h2>
@@ -579,35 +651,42 @@ end
               </code></pre>
             </div>
 
+            <!-- RAILS -->
             <div class="card">
               <h2>Rails</h2>
-              <pre><span>// create a rails app</span><code>
-                rails new myappname
-              </code></pre>
-              <pre><span>// if you want to skip generating exrtra stuffs when creating a new Rails app</span><code>
-  rails new myappname --skip-active-storage --skip-action-mailbox -T
-</code></pre>
               <pre><span class="random-notes">BEST PRACTICE: CODE IN SILO
                 1. Route
                 2. Controller action
                 3. View
                 Test in browser</span></pre>
+
+              <pre><span>// create a rails app</span><code>
+                rails new myappname
+              </code></pre>
+              <pre><span>// if you want to skip generating exrtra stuff by creating a new app</span><code>
+  rails new myappname --skip-active-storage --skip-action-mailbox -T
+</code></pre>
               <pre><span class="random-notes">An action is a controller’s method targeted by a route.</span></pre>
-              <pre><span>// link syntax</span><code>
-link_to "Home" , root_path </code></pre>
-              <pre><span class="random-notes">Steps whenn you added new gem(s) to your Gemfile?:
+
+              <pre><span>// check all the routes</span><code>
+                            rails routes</code><span class="random-notes"> 
+                              rails routes show you a list of your routes with details:
+                              1. Prefix is the rails path prefix of the associated route
+                              2. Verb is the HTTP verb of the route
+                              3. URI Pattern is the path of the route
+                              4. Controller#Action are targeted controller and method
+                            </span></pre>
+
+              <pre><span>// addin a js package</span><code>
+                yarn install package_name
+              </code></pre>
+
+              <pre><span class="random-notes">Steps whenn you have to do after added new gem(s) to your Gemfile?:
 1. Kill any web server running (Ctrl + C)
 2. Run bundle install
 3. Restart the Rails server with rails s
               </span></pre>
-              <pre><span>// check all the routes</span><code>
-                rails routes</code><span class="random-notes"> 
-                  rails routes show you a list of your routes with details:
-                  1. Prefix is the rails path prefix of the associated route
-                  2. Verb is the HTTP verb of the route
-                  3. URI Pattern is the path of the route
-                  4. Controller#Action are targeted controller and method
-                </span></pre>
+
               <pre><span>// launch local Rails server</span><code>
                 rails server # or rails s
               </code></pre>
@@ -622,13 +701,13 @@ link_to "Home" , root_path </code></pre>
               <!-- <pre><span class="random-notes">params holds the formdata</span></pre> -->
 
               <pre><span>// 7 CRUD actions</span> <code>
-                index <span># Read all resources</span>  
-                show <span># Read one resource</span> 
-                new <span># display form for a resource creation</span>  
-                create <span># Create resource</span>  
-                edit <span># display form for a resource update</span> 
-                update <span># Update resource</span>
-                destroy <span># Delete resource</span> 
+                def index <span># Read all resources</span>  
+                def show <span># Read one resource</span> 
+                def new <span># display form for a resource creation</span>  
+                def create <span># Create resource</span>  
+                def edit <span># display form for a resource update</span> 
+                def update <span># Update resource</span>
+                def destroy <span># Delete resource</span> 
               </code></pre>
 
               <pre><span>// rails db tasks</span><code>
@@ -640,68 +719,49 @@ link_to "Home" , root_path </code></pre>
                 rails db:reset <span># Drops database + replays all migration + runs seed </span>
               </code></pre>
 
-<pre><span>// generating a model eg. Restaurant</span><code>
+              <pre><span>// generating a model eg. Restaurant</span><code>
   rails g model Restaurant name:string stars:integer <span># model name in singular</span>
 rails db:migrate <span># always migrate after !!!</span> </code></pre>
 
-<pre><span>// generating a model eg. Review and add Restaurant as foreign key</span><code>
-  rails g model review content:text restaurant:reference <span># syntax for adding foreign key</span>
+              <pre><span>// generating a model eg. Review and add Restaurant as foreign key</span><code>
+  rails g model review content:text restaurant:references
 rails db:migrate <span># always migrate after !!!</span></code>
 <span>// in Restaurant model add a tag. this is important!</span> <code>
   has many :reviews, dependent: :destroy</code><span># now @restaurant.reviews can be called & #destroy deleting all reviews belong to a restaurant when deleted</span></pre>
 
-<pre><span>// generate a migration eg. add another property to Restaurant model</span><code>
+              <pre><span>// generate a migration eg. add another property to Restaurant model</span><code>
 rails g migration AddAddressToRestaurants address:string
 rails db:migrate <span># always migrate after !!!</span></code></pre>
 
-<pre><span>// revert a generated model</span><code>
+              <pre><span>// revert a generated model</span><code>
 rails destroy model Something
 <span># OR</span> 
 rails d model Something
 </code></pre>
 
-<pre><span>// view naming convention</span><code>
+<pre><span>// generating a controller Page</span><code>
+  rails generate controller Pages <span># controller name in plural</span>
+</code></pre>
+
+              <pre><span>// naming html file</span><code>
 actionname.html.erb
 </code></pre>
-<pre><span>// naming convention for creating a html template</span><code>
+              <pre><span>// naming convention for creating a html template</span><code>
 _templatename.html.erb
-<span>// usage in a view</span>
+<span>// render syntax </span>
 render 'template' , model: @model
 </code></pre>
 
-
-
+<pre><span>// linking syntax</span><code>
+                            link_to "Home" , root_path </code></pre>
 
               <pre><span>// shortcut to generate 7CRUD routes</span><code>
                 resources :controllernameinplural <span># in config/routes.rb</span>
               </code></pre>
 
-              <pre><span>// how to generate a subset of th 7 CRUD routes</span><code>
+              <pre><span>// how to generate a subset of the 7 CRUD routes</span><code>
               resources :controllernameinplural, only: [:index, :show] <span># in config/routes.rb</span>
               </code></pre>
-
-              <pre><span>// def index - Read all resources</span><code>
-                  @restaurants = Restaurant.all <span># @restaurants will be passed to the view then iterate</span>
-              </code></pre>
-
-
-              <pre><span>// def new - display form for a resource creation</span><code>
-                  @restaurant = Restaurant.new <span># @restaurant's properties can be entered in a form( use method: POST) then submits creates a new restaurant</span>
-              </code></pre>
-
-              <pre><span>// def show - Read one resource</span><code>
-                  @restaurant = Restaurant.find(params[:id]) <span># @restaurant property will be passed to the the view</span>
-              </code></pre>
-
-              <pre><span>// def edit - display form for a resource update</span><code>
-                                @restaurant = Restaurant.find(params[:id]) <span># @restaurant's properties can be entered in a form( use method: PATCH) then submit creates a new restaurant</span>
-              </code></pre>
-
-              <pre><span>// def destroy</span><code>
-            @restaurant = Restaurant.find(params[:id])<span># </span>
-            @restaurant.destroy <span># delete the restaurant instance with that id</span>
-            redirect_to restaurants_path <span># redirect to home </span>
-              </code></pre> 
 
               <pre><span>//Rails Console in Sandbox mode</span><code>
                 rails c --sandbox <span># test your models without affecting your (development) DB. On exit, every change (create/update/delete) is rollbacked
@@ -719,20 +779,23 @@ render 'template' , model: @model
               <pre><span>// shows all notes in your project</span><code>
                 rails notes </code></pre>
 
-              <a href="https://github.com/lewagon/rails-stylesheets/blob/master/README.md"> 👉🏼 Rails Frontend guide</a>
+              <a href="https://github.com/lewagon/rails-stylesheets/blob/master/README.md" target="_blank"> 👉🏼 Rails
+                Frontend guide</a>
 
-              <pre>never nest more than one level in scss</pre> 
-              <pre>https://stackoverflow.com/questions/17918117/rails-4-list-of-available-datatypes</pre>
-              <a href="https://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-add_column"> List of available Rails datatypes</a>
-              
+              <pre>never nest more than one level in scss</pre>
+              <a href="https://stackoverflow.com/questions/17918117/rails-4-list-of-available-datatype"
+                target="_blank">Rails datatypes</a>
+              <a href="https://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-add_column"
+                target="_blank"> List of available Rails datatypes</a>
 
-            
+
+
             </div>
           </div>
         </div>
       </div>
+      <!-- ENDS CARDS RIGHT -->
 
-      <!-- CONTAINER RIGHT END -->
     </div>
 
   </div>
